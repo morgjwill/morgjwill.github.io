@@ -5,81 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Morgan Willingham Portfolio</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --green: #1f3d2b;
       --brown: #5a3e2b;
       --cream: #f5f0e6;
+      --accent: #3f6b4f;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background: var(--cream);
       color: var(--green);
     }
 
     header {
-      background: var(--green);
+      background: linear-gradient(135deg, var(--green), var(--brown));
       color: var(--cream);
-      padding: 25px;
+      padding: 60px 20px;
       text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
     nav {
       background: var(--brown);
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px;
+      gap: 30px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     nav a {
       color: var(--cream);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #d7c7b0;
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
+      padding: 60px 20px;
+      max-width: 1100px;
       margin: auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--brown);
+      padding-left: 12px;
     }
 
     .about {
       display: flex;
-      gap: 20px;
+      gap: 30px;
       align-items: center;
       flex-wrap: wrap;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     .about img {
-      width: 200px;
-      border-radius: 10px;
-      border: 4px solid var(--brown);
+      width: 250px;
+      border-radius: 15px;
+      border: 5px solid var(--brown);
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
     .card {
       background: white;
-      padding: 20px;
-      border-left: 6px solid var(--green);
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 5px solid var(--green);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--brown);
     }
 
     .card a {
-      color: var(--brown);
-      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--green);
+      font-weight: 600;
       text-decoration: none;
     }
 
@@ -89,13 +136,25 @@
 
     .gallery img {
       width: 100%;
-      border-radius: 10px;
-      border: 3px solid var(--brown);
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      border: 4px solid var(--brown);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    #contact .card {
+      text-align: center;
+      font-size: 1.1rem;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       background: var(--green);
       color: var(--cream);
       margin-top: 40px;
@@ -133,19 +192,19 @@
 
     <div class="card">
       <h3>Why I Won’t Quit Essay</h3>
-      <p>Reflection on mindset, discipline, and staying motivated as a student-athlete.</p>
+      <p>Personal reflection on mindset, pressure, and discipline as a student-athlete navigating challenges on and off the field.</p>
       <a href="First Year Experience Why I Won't Quit Assignment.pdf" target="_blank">View Assignment</a>
     </div>
 
     <div class="card">
       <h3>Style Lookbook</h3>
-      <p>Professional dress and appearance in sports and business settings.</p>
+      <p>Explores professional appearance and how presentation impacts careers in sports and business environments.</p>
       <a href="Sports Management Style Lookbook.pdf" target="_blank">View Assignment</a>
     </div>
 
     <div class="card">
       <h3>Change the World Presentation</h3>
-      <p>Explores gender stereotypes and social change.</p>
+      <p>Focuses on gender stereotypes and how they impact opportunities and social expectations.</p>
       <a href="FINAL version.pdf" target="_blank">View Assignment</a>
     </div>
 
@@ -155,10 +214,10 @@
 <section id="gallery">
   <h2>Gallery</h2>
   <div class="grid gallery">
-    <img src="softball-action.jpg.PNG" alt="Softball">
+    <img src="softball-action.jpg.PNG" alt="Softball Action">
     <img src="portrait1.jpg.PNG" alt="Portrait">
     <img src="portrait2.jpg.PNG" alt="Portrait">
-    <img src="bat-pose.jpg.PNG" alt="Batting">
+    <img src="bat-pose.jpg.PNG" alt="Bat Pose">
   </div>
 </section>
 
