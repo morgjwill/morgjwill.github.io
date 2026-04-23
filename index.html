@@ -1,6 +1,124 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morgan Willingham Portfolio</title>
+
+  <style>
+    :root {
+      --green: #1f3d2b;
+      --brown: #5a3e2b;
+      --cream: #f5f0e6;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--cream);
+      color: var(--green);
+    }
+
+    header {
+      background: var(--green);
+      color: var(--cream);
+      padding: 25px;
+      text-align: center;
+    }
+
+    nav {
+      background: var(--brown);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: var(--cream);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 200px;
+      border-radius: 10px;
+      border: 4px solid var(--brown);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-left: 6px solid var(--green);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card a {
+      color: var(--brown);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      border: 3px solid var(--brown);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--green);
+      color: var(--cream);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Morgan Willingham</h1>
+  <p>Sports Administration Student | Division 1 Softball Athlete</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <section id="about" class="about">
-  <img src="portrait1.jpg.PNG">
+  <img src="portrait1.jpg.PNG" alt="Portrait">
   <div>
     <h2>About Me</h2>
     <p>
@@ -15,31 +133,19 @@
 
     <div class="card">
       <h3>Why I Won’t Quit Essay</h3>
-      <p>
-        This essay focuses on maintaining a positive mindset while balancing life as a student-athlete. It reflects on staying mentally strong, managing pressure, and pushing through challenges both on and off the field.
-      </p>
-      <p><strong>My Role:</strong> I wrote this essay based on my personal experiences.</p>
-      <p><strong>What I Learned:</strong> I learned how important mindset is in everything I do. Staying positive and being able to pull myself out of negative thoughts is key to staying focused and reaching my goals.</p>
+      <p>Reflection on mindset, discipline, and staying motivated as a student-athlete.</p>
       <a href="First Year Experience Why I Won't Quit Assignment.pdf" target="_blank">View Assignment</a>
     </div>
 
     <div class="card">
       <h3>Style Lookbook</h3>
-      <p>
-        This project highlights the importance of professional appearance in different settings, especially within careers related to sports and business. It shows how dressing appropriately can impact how you are perceived.
-      </p>
-      <p><strong>My Role:</strong> I created the PowerPoint and selected outfit ideas that fit different professional situations.</p>
-      <p><strong>What I Learned:</strong> I learned how to properly dress for different events, especially ones I may attend in my future career in sports administration.</p>
+      <p>Professional dress and appearance in sports and business settings.</p>
       <a href="Sports Management Style Lookbook.pdf" target="_blank">View Assignment</a>
     </div>
 
     <div class="card">
       <h3>Change the World Presentation</h3>
-      <p>
-        This presentation focuses on how gender role stereotypes are a major issue in society and explores ways we can work toward creating change.
-      </p>
-      <p><strong>My Role:</strong> I created the PowerPoint presentation and organized the ideas.</p>
-      <p><strong>What I Learned:</strong> I learned how common gender stereotypes still are and how important it is to speak on issues that can impact people’s opportunities and experiences.</p>
+      <p>Explores gender stereotypes and social change.</p>
       <a href="FINAL version.pdf" target="_blank">View Assignment</a>
     </div>
 
@@ -48,11 +154,11 @@
 
 <section id="gallery">
   <h2>Gallery</h2>
-  <div class="grid">
-    <img src="softball-action.jpg.PNG">
-    <img src="portrait1.jpg.PNG">
-    <img src="portrait2.jpg.PNG">
-    <img src="bat-pose.jpg.PNG">
+  <div class="grid gallery">
+    <img src="softball-action.jpg.PNG" alt="Softball">
+    <img src="portrait1.jpg.PNG" alt="Portrait">
+    <img src="portrait2.jpg.PNG" alt="Portrait">
+    <img src="bat-pose.jpg.PNG" alt="Batting">
   </div>
 </section>
 
